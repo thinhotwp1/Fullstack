@@ -1,0 +1,135 @@
+{
+	"info": {
+		"_postman_id": "20c5ff79-cf71-490c-8612-28dbe8d37b6d",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21675108"
+	},
+	"item": [
+		{
+			"name": "UPDATE EMPLOYEE",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\":1,\n    \"name\":\"Thịnh Duy\",\n    \"email\":\"duythinh@gmail.com\",\n    \"jobTitle\":\"Developer\",\n    \"phone\":\"thinh@gmail.com\",\n    \"imageUrl\":\"https://tse2.mm.bing.net/th?id=OIP.GBRsYIu4RMlDEFGofDWK5QHaHa&pid=Api&P=0&h=180\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/update-Employee",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"update-Employee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FIND ALL EMPLOYEES",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/get-Employees",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"get-Employees"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FIND EMPLOYEE",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/find-Employee?codeEmployee=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"find-Employee"
+					],
+					"query": [
+						{
+							"key": "codeEmployee",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE EMPLOYEE",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/delete-Employee?codeEmployee=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"delete-Employee"
+					],
+					"query": [
+						{
+							"key": "codeEmployee",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ADD EMPLOYEE",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"Thịnh Duy\",\n    \"email\":\"duythinh@gmail.com\",\n    \"jobTitle\":\"Developer\",\n    \"phone\":\"thinh@gmail.com\",\n    \"imageUrl\":\"https://tse2.mm.bing.net/th?id=OIP.GBRsYIu4RMlDEFGofDWK5QHaHa&pid=Api&P=0&h=180\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/add-Employee",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"add-Employee"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
