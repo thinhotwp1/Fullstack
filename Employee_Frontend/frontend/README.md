@@ -1,3 +1,6 @@
+
+WORKFLOW: VIEW -> COMPOMENTS -> SERVICES -> HTTP CLIENT -> SERVER -> CONTROLLER -> SERVICES -> MYSQL -> RETURN CLIENT -> VIEW
+
 # Frontend
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.3.

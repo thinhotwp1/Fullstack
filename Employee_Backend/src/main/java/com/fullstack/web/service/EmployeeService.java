@@ -1,6 +1,7 @@
 package com.fullstack.web.service;
 
 import com.fullstack.web.model.Employee;
+import com.fullstack.web.model.FindEmployeeByNameOrEmail;
 import com.fullstack.web.repository.EmployeeRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -29,11 +30,24 @@ public class EmployeeService {
         }
     }
 
-    public Employee addEmployee(Employee employee) {
-        return employeeRepo.save(employee);
+    public int addEmployee(List<Employee> employees) {
+        int i=0;
+        for (Employee employee:employees){
+            try {
+                employeeRepo.save(employee);
+                i++;
+            }catch (Exception e){
+                System.out.println("Lỗi khi thêm nhân viên: "+e);
+            }
+        }
+        return i;
     }
     public List<Employee> getEmployees() {
         return employeeRepo.findAll();
+    }
+
+    public List<Employee> findEmployee(FindEmployeeByNameOrEmail request) throws Exception{
+        return employeeRepo.findAllByNameOrEmailOrderByName(request.getName(), request.getEmail());
     }
 
     public boolean deleteEmployee(String codeEmployee) {
